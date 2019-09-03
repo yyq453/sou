@@ -121,21 +121,43 @@
         <!--天气插件，基于www.tianqiapi.com 天气接口制作-->
     </div>    
     <div id="content">
-        <div class="con">
-            <div class="shlogo"></div>
-            <div class="sou">
-                <form action="https://www.baidu.com/s?ie=utf-8" method="get" target="_self">
-                    <input class="wd" type="text" placeholder="请输入搜索内容" name="wd" x-webkit-speech lang="zh-CN">
-                    <button><i style="font-size: 20px;" class="iconfont icon-sousuo"></i></button>
-                </form>                
-                <ul>
-                    <li data-s="baidu" target="_blank"><i style="background-image: url(icon/baidu.svg);"></i>百度一下</li>
-                    <li data-s="google" target="_blank"><i style="background-image: url(icon/g.svg);"></i>Google</li>
-                </ul>
-            </div>
-        </div>
+
         <div class="foot">© 2016-2019 by <a href="https://yyv.me/">歪歪喂</a> . All rights reserved.</div>
     </div>
+  
+      <!-- 搜索框 start -->
+    <div id="search_form" class="search-section"target="_blank">
+      <div class="search-left">
+        <div id="search_logo" data-type="google" class="search-logo"></div>
+        <div class="input-wrap">
+          <input id="search_keyword"
+                class="search-input"
+                name="keyword"
+                maxlength="100"
+                autocomplete="off"
+                type="text"
+                placeholder="不懂么？不懂就搜，给老子搜！">
+          <div class="clear-keyword" id="clear_keyword" title="清空">x</div>
+        </div>
+        <!--  搜索引擎 start  -->
+        <ul id="search_methods" class="search-methods">
+          <li data-type="google" class="search-item google">谷歌</li>
+          <li data-type="baidu" class="search-item baidu">百度</li>
+          <li data-type="bing" class="search-item bing">必应</li>
+          <li data-type="so" class="search-item so">360搜索</li>
+          <li data-type="sogou" class="search-item sogou">搜狗</li>
+          <li data-type="wangpan" class="search-item wangpan">网盘搜索</li>
+        </ul>
+        <!--  搜索引擎 end  -->
+        <!--  搜索结果 start -->
+        <ul id="search_result" class="search-result">
+          <!--<li class="result-item"></li>-->
+        </ul>
+        <!--  搜索结果 end -->
+      </div>
+      <input class="search-submit" value="" id="search_submit" type="submit">
+    </div>
+    <!-- 搜索框 end -->
 <!--
 作者:D.Young
 主页：https://yyv.me/
